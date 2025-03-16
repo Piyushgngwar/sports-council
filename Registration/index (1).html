@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Intra Sports Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Register for Sangarsh'25</h1>
+    <form id="registrationForm">
+      <fieldset>
+        <legend>Select Sports</legend>
+        <label><input type="checkbox" id="sport1" value="Cricket"> Cricket</label>
+        <label><input type="checkbox" id="sport2" value="Football"> Football</label>
+        <label><input type="checkbox" id="sport3" value="Basketball" style="margin-right: 10px;"> Basketball</label>
+        <label><input type="checkbox" id="sport4" value="Table Tennis"> Table Tennis</label>
+        <label><input type="checkbox" id="sport5" value="Badminton"> Badminton</label>
+         <label><input type="checkbox" id="sport6" value="Kabaddi"> Kabaddi</label>
+         <label><input type="checkbox" id="sport7" value="Volleyball"> Volleyball</label>
+         <label><input type="checkbox" id="sport8" value="Chess"> Chess</label>
+         <label><input type="checkbox" id="sport9" value="Carrom"> Carrom</label>
+         <label><input type="checkbox" id="sport10" value="Athelatics"> Athelatics</label>
+         <label><input type="checkbox" id="sport11" value="Lawn Tennis"> Lawn Tennis</label>
+         <label><input type="checkbox" id="sport12" value="Kho Kho"> Kho Kho</label>
+         <label><input type="checkbox" id="sport13" value="Squash"> Squash</label>
+         <label><input type="checkbox" id="sport14" value="Power Lifting"> Power Lifting</label>
+         <label><input type="checkbox" id="sport15" value="Karate"> Karate</label>
+         <label><input type="checkbox" id="sport16" value="Yoga"> Yoga</label>
+         <label><input type="checkbox" id="sport17" value="Tug of War"> Tug of War</label>
+      </fieldset>
+      <!--For athelatics-->
+        <fieldset id="sport10">
+        <legend>Athelatics details</legend>
+          <label><input type="checkbox" id="sport18" value="Badminton"> Badminton</label>
+         <label><input type="checkbox" id="sport19" value="Kabaddi"> Kabaddi</label>
+         <label><input type="checkbox" id="sport20" value="Volleyball"> Volleyball</label>
+         <label><input type="checkbox" id="sport21" value="Chess"> Chess</label>
+         <label><input type="checkbox" id="sport22" value="Carrom"> Carrom</label>
+          </div>
+      </fieldset>
+
+      <div class="selected-sports" id="selectedSportsContainer"></div>
+
+      <fieldset>
+        <legend>Player Type</legend>
+        <label><input type="radio" id="individual" name="playerType" value="individual" checked> Individual</label>
+        <label><input type="radio" id="team" name="playerType" value="team"> Team</label>
+      </fieldset>
+
+      <!-- Individual fields -->
+      <fieldset id="individualFields">
+        <legend>Individual Details</legend>
+        <div class="grid-container">
+          <div>
+        <label for="name" style="margin-right: 16px;">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+          </div>
+          <div>
+        <label for="rollNo">Roll Number:</label>
+        <input type="text" id="rollNo" name="rollNo" required>
+          </div>
+          <div>
+        <label for="individualEmail" style="margin-right: 25px;">Email ID:</label>
+        <input type="email" id="individualEmail" name="email" required>
+          </div>
+      </fieldset>
+
+      <!-- Team fields (hidden initially) -->
+      <fieldset id="teamFields" style="display: none;">
+        <legend>Team Details</legend>
+        <div class="grid-container">
+    <div>
+    <label for="teamName" style="margin-right: 49px;">Team Name:</label>
+    <input type="text" id="teamName" name="teamName">
+</div>
+    <div>
+        <label for="teamLeader">Team Leader Name:</label>
+        <input type="text" id="teamLeader" name="teamLeader">
+    </div>
+    <div>
+        <label for="email" style="margin-right: 66px;">Email ID:        </label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div>
+        <label for="member1" style="margin-right: 16px;">Member 1 Name:</label>
+        <input type="text" id="member1" name="member1">
+    </div>
+    <div>
+        <label for="member2" style="margin-right: 16px;">Member 2 Name:</label>
+        <input type="text" id="member2" name="member2">
+    </div>
+    <div>
+        <label for="member3" style="margin-right: 16px;">Member 3 Name:</label>
+        <input type="text" id="member3" name="member3">
+    </div>
+    <div>
+        <label for="member4" style="margin-right: 16px;">Member 4 Name:</label>
+        <input type="text" id="member4" name="member4">
+    </div>
+    <div>
+        <label for="member5" style="margin-right: 16px;">Member 5 Name:</label>
+        <input type="text" id="member5" name="member5">
+    </div>
+    <div>
+        <label for="member6" style="margin-right: 16px;">Member 6 Name:</label>
+        <input type="text" id="member6" name="member6">
+    </div>
+    <div>
+        <label for="member7" style="margin-right: 16px;">Member 7 Name:</label>
+        <input type="text" id="member7" name="member7">
+    </div>
+    <div>
+        <label for="member8" style="margin-right: 16px;">Member 8 Name:</label>
+        <input type="text" id="member8" name="member8">
+    </div>
+    <div>
+        <label for="member9" style="margin-right: 16px;">Member 9 Name:</label>
+        <input type="text" id="member9" name="member9">
+    </div>
+    <div>
+        <label for="member10" style="margin-right: 8px;">Member 10 Name:</label>
+        <input type="text" id="member10" name="member10">
+    </div>
+</div>
+
+      </fieldset>
+
+      <div id="teamIdContainer"></div> <!-- Container to display the team ID -->
+
+      <button type="submit">Submit</button>
+    </form>
+  </div> <!-- End container -->
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      let selectedSports = [];
+
+      // Initially disable team fields inputs since individual is selected by default
+      $("#teamFields input").prop("disabled", true);
+
+      // Function to update the selected sports display
+      function updateSelectedSports() {
+        $("#selectedSportsContainer").empty();
+        selectedSports.forEach(function(sport) {
+          $("#selectedSportsContainer").append(
+            `<div class="selected-sport">${sport}</div>`
+          );
+        });
+      }
+
+      // Event listener for checkbox changes
+      $("input[type='checkbox']").change(function() {
+        let sport = $(this).val();
+        if ($(this).is(":checked")) {
+          selectedSports.push(sport);
+        } else {
+          selectedSports = selectedSports.filter(item => item !== sport);
+        }
+        updateSelectedSports();
+      });
+
+      // Function to generate a team ID
+      function generateTeamId() {
+        let sportCodes = selectedSports.map(sport => sport.slice(0, 3).toUpperCase()).join('');
+        let randomNumber = Math.floor(1000 + Math.random() * 9000); // Generate a 4-digit number
+        return sportCodes + randomNumber;
+      }
+
+      // Show/hide and enable/disable fields based on player type
+      $("input[name='playerType']").change(function() {
+        if ($("#team").is(":checked")) {
+          $("#individualFields").hide();
+          $("#teamFields").show();
+          $("#individualFields input").prop("disabled", true);
+          $("#teamFields input").prop("disabled", false);
+        } else {
+          $("#individualFields").show();
+          $("#teamFields").hide();
+          $("#individualFields input").prop("disabled", false);
+          $("#teamFields input").prop("disabled", true);
+        }
+      });
+
+      // Handle form submission
+      $("#registrationForm").submit(function(event) {
+        event.preventDefault(); // Prevent default form submission
+
+        var teamId = generateTeamId(); // Generate team ID
+
+        // Display the team ID on the webpage
+        $("#teamIdContainer").html(`Your Team ID: <strong>${teamId}</strong>`);
+        // Show the team ID in a pop-up alert
+        alert(`Your Team ID: ${teamId}`);
+
+        // Choose the correct email field based on the selected registration type
+        var playerType = $("input[name='playerType']:checked").val();
+        var email = (playerType === 'individual') ? $("#individualEmail").val() : $("#teamEmail").val();
+
+        var formData = {
+          "playerType": playerType,
+          "name": $("#name").val(),
+          "rollNo": $("#rollNo").val(),
+          "email": email,
+          "sports": selectedSports,
+          "teamId": teamId,
+          "teamName": $("#teamName").val(),
+          "teamLeader": $("#teamLeader").val(),
+          "member1": $("#member1").val(),
+          "member2": $("#member2").val(),
+          "member3": $("#member3").val(),
+          "member4": $("#member4").val(),
+          "member5": $("#member5").val(),
+          "member6": $("#member6").val(),
+          "member7": $("#member7").val(),
+          "member8": $("#member8").val(),
+          "member9": $("#member9").val(),
+          "member10": $("#member10").val()
+        };
+
+        // Send data to the backend
+        $.ajax({
+          type: "POST",
+          url: "/submit",
+          contentType: "application/json",
+          data: JSON.stringify(formData),
+          success: function(response) {
+            alert("Registration successful!");
+          },
+          error: function(error) {
+            alert("There was an error. Please try again.");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
