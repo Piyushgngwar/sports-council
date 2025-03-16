@@ -1,36 +1,39 @@
- body::before {
-    content: "";
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    right: 30px;
-    bottom: 30px;
-    background-image: url('new266.jpg');
-      background-repeat: no-repeat;
-      background-position: center center;
-    background-size: cover;
-    filter: blur(0px);
-    z-index: -1;
-      opacity: 0.8;
-  }
-
 /* Base Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
-    padding: 20px;
-    color: #fff;
+    padding: 0;
+    color: #333;
     background: #f4f4f4; /* fallback background color */
     position: relative;
     overflow-x: hidden;
   }
   
+  /* Pseudo-element for blurred background image */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('new266.jpg') no-repeat center center fixed;
+    background-size: cover;
+    filter: blur(0px);
+    z-index: -1;
+  }
+  
   /* Container to center content and add padding */
-
-    body{
-        min-height: 100;
-    }
-} 
+  .container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fdfdfd;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  
   /* Headings */
   h1 {
     text-align: center;
@@ -40,20 +43,19 @@ body {
   
   /* Form Styles */
   form {
-      max-width: 800px;
-margin: auto;
+    margin-top: 20px;
   }
   
   fieldset {
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 20px;
     border-radius: 4px;
     margin-bottom: 20px;
   }
   
   legend {
     font-weight: bold;
-    margin-left: 10px;
+    padding: 0 10px;
     color: #333;
   }
   
@@ -62,29 +64,13 @@ margin: auto;
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
-      margin-top: 10px;
   }
-
-  .grid-container {
-    display: grid;
-    gap: 10px;
-    justify-items: end; 
-}
-
-.team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-}
-
-.flex-row {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
+  
   input[type="text"],
   input[type="email"] {
     width: 100%;
     padding: 8px;
-    margin: 5px 0;
+    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     box-sizing: border-box;
@@ -100,7 +86,7 @@ margin: auto;
   button[type="submit"] {
     display: block;
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     background: #1f8bf7;
     color: #fff;
     border: none;
@@ -112,11 +98,7 @@ margin: auto;
   button[type="submit"]:hover {
     background: #005bb5;
   }
-  @media (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-}
+  
   /* Selected sports display */
   .selected-sports {
     margin-top: 20px;
