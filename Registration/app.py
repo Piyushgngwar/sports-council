@@ -11,7 +11,7 @@ CORS(app)  # Enabling CORS globally
 
 # Set up the Sheets API with OAuth credentials
 scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/spreadsheets", "https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name(r"C:\Users\mayan\Downloads\intra-sports-competition-api-325f110d4e0c.json", scope)
+creds = ServiceAccountCredentials.from_json_keyfile_name(r"intra-sports-competition-api-325f110d4e0c.json", scope)
 client = gspread.authorize(creds)
 
 
