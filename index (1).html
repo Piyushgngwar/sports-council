@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Sports Info</title>
+  <!-- Importing Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      overflow: hidden;
+    }
+    /* Notification Banner */
+    .notification {
+      background-color: #ffeb3b;
+      color: #333;
+      padding: 15px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    /* Container for sidebar and content */
+    .container {
+      display: flex;
+      flex-grow: 1;
+    }
+    /* Sidebar styling */
+    .sidebar {
+      width: 250px;
+      background: #fff;
+      padding: 20px;
+      border-right: 1px solid #e0e0e0;
+    }
+      .sidebar {
+    max-height: 100vh; /* Set a max height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+    
+    .sports-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .sports-list li {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .sports-list li:hover {
+      background: #e3f2fd;
+      transform: scale(1.02);
+    }
+    /* Main Content Area */
+    .content {
+      flex-grow: 1;
+      padding: 40px;
+      overflow-y: auto;
+    }
+    .sport-details {
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .sport-details h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .sport-details p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #555;
+    }
+    .sport-details a {
+      text-decoration: none;
+      color: #1976d2;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    .sport-details a:hover {
+      color: #1565c0;
+    }
+    /* Responsive design for smaller screens */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 200px;
+      }
+      .content {
+        padding: 20px;
+      }
+    }
+  </style>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- FontAwesome for icons (optional) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">IntraSports</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="schedule/sports.html">Sports</a></li>
+          <li class="nav-item"><a class="nav-link" href="../results.html">Results</a></li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="../Registration/index (1).html">Registration</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Notification Banner -->
+  <div class="notification">
+    Registration will be open till 24th March, 2025. Some sports will have spots registration also.
+  </div>
+  
+  <!-- Container for Sidebar and Content -->
+  <div class="container">
+    <!-- Sidebar Column -->
+    <div class="sidebar" id="sidebar">
+      <ul class="sports-list" id="sportsList">
+        <li data-sport="Athletics">Athletics</li>
+        <li data-sport="basketball">Basketball</li>
+        <li data-sport="tabletennis">Table Tennis</li>
+        <li data-sport="Badminton">Badminton</li>
+        <li data-sport="Carrom">Carrom</li>
+        <li data-sport="Chess">Chess</li>
+        <li data-sport="Cricket">Cricket</li>
+        <li data-sport="Football">Football</li>
+        <li data-sport="kabaddi">Kabaddi</li>
+        <li data-sport="khokho">Kho-Kho</li>
+        <li data-sport="martialarts">Martial Arts</li>
+        <li data-sport="Powerlifting">Power Lifting</li>
+        <li data-sport="LawnTennis">Lawn Tennis</li>
+        <li data-sport="Volleyball">Volleyball</li>
+        <li data-sport="Yoga">Yoga</li>
+        <li data-sport="tugofwar">Tug of War</li>
+        <li data-sport="Squash">Squash</li>
+      </ul>
+    </div>
+    
+    <!-- Main Content Area for Sport Details -->
+    <div class="content" id="sportDetails">
+      <div class="sport-details">
+        <h2>Welcome!</h2>
+        <p>Select a sport from the sidebar to view its rules and registration link.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Load sport details when a sport is clicked
+    const sportsList = document.getElementById("sportsList");
+    const sportDetails = document.getElementById("sportDetails");
+
+    sportsList.addEventListener("click", function(event) {
+      if (event.target && event.target.nodeName === "LI") {
+        const sport = event.target.getAttribute("data-sport");
+        let detailsHTML = '';
+        switch (sport) {
+          case "Athletics":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Athletics</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Hritik Yadav</h></li>
+                <li><h>Ilesha Ojha</h></li>
+                <p><strong>Events:</strong></p>
+                <li>
+                <h>100m, 200m, 400m, 800m, 1500m, 3000m girls, 5000m, 4x100m, 4*400m</h>
+                <li><h>Long Jump</h></li>
+                <li><h>Triple Jump</h></li>
+                <li><h>Shot Put</h></li>
+                <li><h>Javelin Throw</h></li>
+                <li><h>Discus Throw</h>
+                </li>
+                <p><a href="https://www.fifa.com/" target="_blank">Register for Athelatics</a></p>
+              </div>
+            `;
+            break;
+          case "basketball":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Basketball</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Naini Diwan</h></li>
+                <li><h>Himanshu Tiwari</h></li>
+                <p><strong>Events:</strong></p>
+                
+                  </li>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeJxvoH4byQUfM9-tEgvmuhPXg6dC1h13KtMTYL6_axsPpA3Q/viewform?usp=sf_link" target="_blank">Register for Basketball</a></p>
+              </div>
+            `;
+            break;
+          case "tabletennis":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Table Tennis</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Somjit Chattopadhyay</h></li>
+                <li><h>Poorvai Chandrasen</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Singles</h></li>
+                <li><h>Doubles</h></li>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSd2JET5pcnQhm3bLL3RnF-M_xF4_hSIetXIUbjf4MGh88e1tA/viewform?usp=header" target="_blank">Register for Table Tennis</a></p>
+              </div>
+            `;
+            break;
+            case "Badminton":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Badminton</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Subham Saswat Pradhan</h></li>
+                <li><h>Ayush Raj</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Men's Singles</h></li>
+                <li><h>Men's Doubles</h></li>
+                <li><h>Women's Singles</h></li>
+                <li><h>Women's Doubles</h></li>
+                <li><h>Mixed Doubles</h></li>
+                <p><a href="https://forms.gle/GBkrCaULvnzahcfe8" target="_blank">Register for Badminton</a></p>
+              </div>
+            `;
+            break;
+            case "Carrom":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Carrom</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Gaurav Kumar</h></li>
+                <li><h>Sanyog Sharma</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Singles</h></li>
+                <li><h>Doubles</h></li>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSePlyvN2SK7zr9vt7Su8AelSajM4Ci-Xuzvm6iUkf435I_T3Q/viewform?usp=header" target="_blank">Register for Carrom</a></p>
+              </div>
+            `;
+            break;
+            case "Chess":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Chess</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Rushikesh Oke</h></li>
+                <li><h>Ranjit Anand</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Rapid Tournament</h></li>
+                <li><h>Blitz Tournament</h></li>
+                <p><a href="https://www.itftennis.com/" target="_blank">Register for Chess</a></p>
+              </div>
+            `;
+            break;
+            case "Cricket":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Cricket</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Lokesh Pareekh</h></li>
+                <li><h>Vandan</h></li>  
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfSFYliY0AGv8p2djEzaSNttAX3v4JG2qiMkNUuY-CkRPUyYg/viewform?usp=header" target="_blank">Register for Cricket</a></p>
+              </div>
+            `;
+            break;
+            case "Football":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Football</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Soumyadip Ray</h></li>
+                <li><h>Divya Sharma</h></li>
+                <p><a href="https://forms.gle/8hKWFQVAxTJariHE7" target="_blank">Register for Football</a></p>
+              </div>
+            `;
+            break;
+            case "kabaddi":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Kabaddi</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Gudala Rushi Kesava Reddy</h></li>
+                <li><h>Nallapureddy Chaaturya</h></li>
+                <p><a href="https://forms.gle/yR5tgsJtuPoRPrbL9" target="_blank">Register for Kabaddi</a></p>
+              </div>
+            `;
+            break;
+            case "khokho":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Kho-Kho</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Saurabh Shirke</h></li>
+                <li><h>Avani Jain</h></li>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfrj4TalnqqMhYpirpbsnZhBjCi8Vu5mk1f6_R3_tFEOw4Qsw/viewform?usp=header" target="_blank">Register for Kho-Kho</a></p>
+              </div>
+            `;
+            break;
+            case "martialarts":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Martial Arts</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Shrutisagar Jena</h></li>
+                <li><h>Sanika Ashish Sarkate</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Men's Kumite Competition</h></li>
+                <li><h>Women's Kumite Competition</h></li>
+                <li><h>Men's Kata Competition</h></li>
+                <li><h>Women's Kata Competition</h></li>
+                <li><h>Lathi demonstration</h></li>
+                <li><h>Kick Balancing</h></li>
+                <p><a href="https://forms.gle/QTaJCLWd76Fd37KZ6" target="_blank">Register for Martial Arts</a></p>
+              </div>
+            `;
+            break;
+            case "Powerlifting":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Power Lifting</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Shivraj Deshmukh</h></li>
+                <li><h>Sanskruti Chame</h></li>
+                <p><strong>Events:</strong></p>
+                <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeqL0aZ6bDeZgRrp21XS7Fy4Rus3VIVFfdrGfWkX4Ox8hD2Jg/viewform" target="_blank">Register for Power Lifting</a></p>
+              </div>
+            `;
+            break;
+            case "LawnTennis":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Lawn Tennis</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Aditi Ramani</h></li>
+                <li><h>Daksh Dhavle</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Men's Singles</h></li>
+                <li><h>Women's Singles</h></li>
+                <li><h>Men's Doubles</h></li>
+                <li><h>Women's Doubles</h></li>
+                <li><h>Mixed Doubles</h></li>
+                <p><a href="hhttps://docs.google.com/forms/d/e/1FAIpQLSfLRRp9fxd2rF2qdtiO09EdYE9whzNHpaAXHN-EJ26O891SHw/viewform?usp=sharing" target="_blank">Register for Lawn Tennis</a></p>
+              </div>
+            `;
+            break;
+            case "Volleyball":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Volleyball</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Bhumika Patidar</h></li>
+                <li><h>Onteru Anji Babu</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h> Boy's Team</h></li>
+                <li><h>Girl's Team</h></li>
+                <li><h>Mixed Team</h></li>
+                <p><a href="https://forms.gle/RAC4f6KqSDCPdRue7" target="_blank">Register for Volleyball</a></p>
+              </div>
+            `;
+            break;
+            case "Yoga":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Yoga</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Devyani Sanjay Patil</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Chakrasana</h></li>
+                <li><h>Garudasana</h></li>
+             <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdEgD8vQAngrnHS3A4oPjoTareve8Gzsy_XUQesLvX7lbIBPw/viewform?usp=sf_link" target="_blank">Register for Yoga</a></p>
+              </div>
+            `;
+            break;
+            case "tugofwar":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Tug of War</h2>
+                 <p><strong>Event Coordinators:</strong></p>
+                <li><h>Shivraj Deshmukh</h></li>
+                <li><h>Sanskruti Chame</h></li>
+              <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSd0Ho8LpLjmJUAHqvdS-_MXJXHlG-OV3JMvU9rPg0dVJDSaGQ/viewform" target="_blank">Register for Tug of War</a></p>
+              </div>
+            `;
+            break;
+            case "Squash":
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Squash</h2>
+                <p><strong>Event Coordinators:</strong></p>
+                <li><h>Porus Naresh Vaid</h></li>
+                <p><strong>Events:</strong></p>
+                <li><h>Men's Singles</h></li>
+                <li><h>Women's Singles</h></li>
+                <li><h>Mixed Singles</h></li>
+                <p><a href="https://forms.gle/Y8Pb5ReFZEU5QpE5A" target="_blank">Register for Squash</a></p>
+              </div>
+            `;
+            break;
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Badminton</h2>
+                <p><strong>Rules:</strong> Matches follow ITF guidelines. Enjoy the blend of strategy and athleticism on the court.</p>
+                <p><a href="https://www.itftennis.com/" target="_blank">Register for Badminton</a></p>
+              </div>
+            `;
+            break;
+          default:
+            detailsHTML = `
+              <div class="sport-details">
+                <h2>Sport Information</h2>
+                <p>Information not available.</p>
+              </div>
+            `;
+        }
+        sportDetails.innerHTML = detailsHTML;
+      }
+    });
+  </script>
+</body>
+</html>
