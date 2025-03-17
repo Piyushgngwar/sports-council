@@ -24,18 +24,26 @@ header::after {
 /* Increase overall navbar height and vertical padding */
 .navbar {
   min-height: 60px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+.navbar-brand img {
+  width: 80px; /* Optional: Make the logo smaller */
+  height: 80px; /* Optional: Make the logo smaller */
+  border-radius: 50%; /* Optional: Make it circular */
+  object-fit: cover;
+}
 /* Increase the font size of the brand/logo */
 .navbar-brand {
   font-size: 1.3rem;
+   padding-left: 15px;
 }
 
 /* Style the navbar links with an underline instead of an outline box */
 .navbar-nav .nav-link {
   font-size: 1.2rem;
+  padding-right: 15px;
   padding: 0.75rem 1rem;
   margin: 0 7px;
   text-decoration: underline;
