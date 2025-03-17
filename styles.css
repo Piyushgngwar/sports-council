@@ -23,14 +23,14 @@ header::after {
 
 /* Increase overall navbar height and vertical padding */
 .navbar {
-  min-height: 70px;
+  min-height: 45px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .navbar-brand img {
-  width: 60px; /* Optional: Make the logo smaller */
-  height: 60px; /* Optional: Make the logo smaller */
+  width: 50px; /* Optional: Make the logo smaller */
+  height: 50px; /* Optional: Make the logo smaller */
   border-radius: 50%; /* Optional: Make it circular */
   object-fit: cover;
 }
