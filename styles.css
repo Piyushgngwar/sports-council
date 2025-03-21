@@ -134,6 +134,24 @@ footer a:hover {
   background: #fff;
 }
 
+/* Arrow Navigation Styles */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+  color: #fff;
+  z-index: 10;
+}
+.left-arrow {
+  left: 20px;
+}
+.right-arrow {
+  right: 20px;
+}
 /* Slide positioning controlled by checked radio buttons */
 #radio1:checked ~ .slides {
   transform: translateX(0);
