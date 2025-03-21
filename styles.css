@@ -61,6 +61,10 @@ header::after {
   color: #f8f9fa;
 }
 
+#about {
+  scroll-margin-top: 80px;
+}
+
 /* Footer Social Icons Hover */
 footer a:hover {
   color: #0d6efd;
