@@ -10,6 +10,29 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
+    <style>
+    .fancy-text {
+      font-weight: bold;
+      -webkit-text-stroke: 0.4px black;
+      color: white;
+      text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7);
+    }
+    .letter {
+      opacity: 0;
+      display: inline-block;
+      animation: fadeIn 0.5s forwards;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 <body>
   <!-- Navbar -->
@@ -29,7 +52,12 @@
           <li class="nav-item"><a class="nav-link" href="schedule/sports.html">Sports</a></li>
           <li class="nav-item"><a class="nav-link" href="results.html">Results</a></li>
           <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-          <li class="nav-item"><a class="nav-link" href="index (1).html">Registration</a></li>
+          <!-- Registration link now triggers the modal -->
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#registrationModal">
+              Registration
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -40,8 +68,10 @@
     <div class="container text-center text-white">
       <h1 class="display-4 fw-bold">Welcome to Sangharsh'25</h1>
 <p class="lead fw-bold">Compete, Connect, Celebrate</p>
-<a href="index (1).html" class="btn btn-primary btn-lg fw-bold">Register Now</a>
-
+<!-- Register Now button triggers the modal -->
+      <a href="#" class="btn btn-primary btn-lg fw-bold" data-bs-toggle="modal" data-bs-target="#registrationModal">
+        Register Now
+      </a>
     </div>
   </header>
 
@@ -136,18 +166,15 @@
         <img src="Photo4.jpg" alt="Slide 4">
       </div>
       <div class="slide">
-        <img src="https://via.placeholder.com/800x400?text=Slide+5" alt="Slide 5">
+        <img src="Photo5.jpg" alt="Slide 5">
       </div>
     </div>
   
-    <!-- Manual navigation dots -->
-    <div class="navigation-manual">
-      <label for="radio1" class="manual-btn"></label>
-      <label for="radio2" class="manual-btn"></label>
-      <label for="radio3" class="manual-btn"></label>
-      <label for="radio4" class="manual-btn"></label>
-      <label for="radio5" class="manual-btn"></label>
-    </div>
+   
+
+  <!-- Arrow Navigation -->
+    <div class="arrow left-arrow"><i class="fas fa-chevron-left"></i></div>
+    <div class="arrow right-arrow"><i class="fas fa-chevron-right"></i></div>
   </div>
 
   <!-- Results Section -->
@@ -208,6 +235,25 @@
       </div>
     </div>
   </section>-->
+
+   <!-- Registration Modal -->
+  <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="registrationModalLabel">Notice</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Registration will be open till 24th March, 2025. Some sports will have spots registration also.
+        </div>
+        <div class="modal-footer">
+          <!-- The OK button redirects to registration.html -->
+          <a href="registration.html" class="btn btn-primary">OK</a>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
