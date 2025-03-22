@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
- // Get slider elements
+  // Get slider elements
   const slider = document.querySelector('.slider');
   const radioButtons = document.querySelectorAll('input[name="radio-btn"]');
   const leftArrow = document.querySelector('.left-arrow');
