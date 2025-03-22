@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="styles.css" />
-    <style>
+  <style>
     .fancy-text {
       font-weight: bold;
       -webkit-text-stroke: 0.4px black;
@@ -39,9 +39,9 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#">
-            <img src="iiserblogo.png" alt="Logo" width="40" height="40" class="me-2"> <!-- Adjust size as needed -->
-            <span class="fw-bold">Sangharsh</span>
-        </a>
+        <img src="sangarshlogo.png" alt="Logo" width="40" height="40" class="me-2">
+        <span class="fw-bold">Sangharsh</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -64,11 +64,11 @@
   </nav>
 
   <!-- Hero Section -->
- <header id="home" class="vh-100 d-flex align-items-center" style="background-image: url('background.jpg'); background-size: cover; background-position: center;">
+  <header id="home" class="vh-100 d-flex align-items-center" style="background-image: url('bg.png'); background-size: cover; background-position: center;">
     <div class="container text-center text-white">
-      <h1 class="display-4 fw-bold">Welcome to Sangharsh'25</h1>
-<p class="lead fw-bold">Compete, Connect, Celebrate</p>
-<!-- Register Now button triggers the modal -->
+      <h1 class="display-4 fw-bold fancy-text">WELCOME TO SANGHARSH'25</h1>
+      <p class="lead fw-bold">Compete, Connect, Celebrate</p>
+      <!-- Register Now button triggers the modal -->
       <a href="#" class="btn btn-primary btn-lg fw-bold" data-bs-toggle="modal" data-bs-target="#registrationModal">
         Register Now
       </a>
@@ -99,19 +99,17 @@
     </div>
   </section>
 
+  <!-- Description Container -->
   <div class="container text-center">
     <p>This year, we are proud to feature <strong>17 diverse sports</strong> that cater to both team players and individual competitors. Our lineup is designed to challenge and inspire, ensuring there’s something for everyone. Our commitment extends beyond the tournament. We strive to promote healthy living, nurture local talent, and strengthen community bonds. Whether you’re competing on the field or cheering from the stands, Sangharsh'25 is an opportunity to be part of a legacy that celebrates sportsmanship and unity.
     Whether you are competing or cheering from the sidelines, Sangharsh'25 promises an experience filled with passion, excitement, and the relentless pursuit of excellence. Join us as we celebrate sportsmanship and unity through every match, game, and performance.</p>
   </div>
   
-
-  
-  
   <!-- Schedule Section -->
   <section id="schedule" class="py-5 bg-light">
     <div class="container">
       <h2 class="text-center mb-4">Tournament Schedule</h2>
-      <p class="text-center mb-4">Schedule will be be updated soon</p>
+      <p class="text-center mb-4">Schedule will be updated soon</p>
       <div class="table-responsive">
         <table class="table table-bordered table-striped">
           <thead class="table-dark">
@@ -143,6 +141,76 @@
     </div>
   </section>
 
+  <!-- Calendar Section -->
+  <!--<section id="calendar" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Event Calendar</h2>
+      <div class="calendar-container">
+        <table class="table table-bordered text-center">
+          <thead class="table-dark">
+            <tr>
+              <th>Sun</th>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td>21</td>
+              <td>22</td>
+              <td>23</td>
+              <td>24</td>
+              <td>25</td>
+              <td>26</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td>28</td>
+              <td>29</td>
+              <td>30</td>
+              <td>31</td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- Slider Section -->
   <div class="slider">
     <!-- Radio buttons for each slide -->
     <input type="radio" name="radio-btn" id="radio1" checked>
@@ -150,7 +218,7 @@
     <input type="radio" name="radio-btn" id="radio3">
     <input type="radio" name="radio-btn" id="radio4">
     <input type="radio" name="radio-btn" id="radio5">
-  
+    
     <!-- Slides container -->
     <div class="slides">
       <div class="slide">
@@ -169,74 +237,13 @@
         <img src="Photo5.jpg" alt="Slide 5">
       </div>
     </div>
-  
-   
-
-  <!-- Arrow Navigation -->
+    
+    <!-- Arrow Navigation -->
     <div class="arrow left-arrow"><i class="fas fa-chevron-left"></i></div>
     <div class="arrow right-arrow"><i class="fas fa-chevron-right"></i></div>
   </div>
 
-  <!-- Results Section -->
-  <!--<section id="results" class="py-5">
-    <div class="container">
-      <h2 class="text-center mb-4">Latest Results</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Match 1</h5>
-              <p class="card-text">Team A 3 - 1 Team B</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Match 2</h5>
-              <p class="card-text">Team C 2 - 2 Team D</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100">
-            <div class="card-body">
-              <h5 class="card-title">Match 3</h5>
-              <p class="card-text">Team E 0 - 4 Team F</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>-->
-
-  <!-- Contact Section -->
-  <!--<section id="contact" class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center mb-4">Get in Touch</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Name" />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="Your Email" />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>-->
-
-   <!-- Registration Modal -->
+  <!-- Registration Modal -->
   <div class="modal fade" id="registrationModal" tabindex="-1" aria-labelledby="registrationModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
@@ -255,21 +262,16 @@
     </div>
   </div>
 
-
-
   <!-- Footer -->
   <footer class="py-4 bg-dark text-white">
     <div class="container">
       <div class="row align-items-center">
         <!-- Left Logo -->
         <div class="col-md-3 text-center text-md-start mb-2 mb-md-0">
-          <img src="sportslogo.png" alt="Left Logo" class="img-fluid" style="max-height: 150px;">
+          <img src="sportslogo.png" alt="Left Logo" class="img-fluid" style="max-height: 100px;">
         </div>
         <!-- Center Text -->
         <div class="col-md-6 text-center mb-2 mb-md-0">
-          <p class="footer-big mb-0">
-            Thank you for joining us in celebrating the spirit of sportsmanship and unity.
-          </p>
           <p class="footer-medium mb-0">
             Developed and Designed by 
             <a href="https://www.instagram.com/_.mayank._21._?igsh=YTVzYWQ1dnh6OGJl" class="text-white text-decoration-underline">Mayank Srivastava</a> 
@@ -282,12 +284,11 @@
         </div>
         <!-- Right Logo -->
         <div class="col-md-3 text-center text-md-end">
-          <img src="sangarshlogo.png" alt="Right Logo" class="img-fluid" style="max-height: 150px;">
+          <img src="sangarshlogo.png" alt="Right Logo" class="img-fluid" style="max-height: 100px;">
         </div>
       </div>
     </div>
   </footer>  
-  
 
   <!-- Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
