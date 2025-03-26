@@ -172,9 +172,6 @@ footer a:hover {
 #radio5:checked ~ .slides {
   transform: translateX(-80%);
 }
-#radio6:checked ~ .slides {
-  transform: translateX(-100%);
-}
 
 
 footer .footer-big {
